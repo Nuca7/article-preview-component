@@ -1,0 +1,209 @@
+* {
+    margin:0px;
+    padding:0px;
+}
+body {
+    background: hsl(210, 46%, 95%);
+    font-family: 'Manrope', sans-serif;
+}
+h3 {
+    color: hsl(217, 19%, 35%);
+}
+p {
+    margin: 1rem 0rem;
+    color: hsl(214, 17%, 51%);
+    font-size: 0.8rem;
+}
+
+/* -------------------------------- */
+
+.article {
+    display: flex;
+    max-width: 800px;
+    height: 270px;
+    margin: 5rem auto;
+}
+.drawers-img {
+    border-radius: 10px;
+    width: 350px;
+}
+
+
+.article-info {
+    position: relative;
+    background: white;
+    padding: 2rem 2rem 0rem 2rem;
+    border-radius: 0px 10px 10px 0px;
+    left: -50px;
+}
+
+
+.bottom {
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top: 2rem;
+    padding-bottom: 0.6rem;
+}
+.author-info img,
+.author-info div {
+    display: inline-block;
+    vertical-align: middle;
+}
+.author-info img{
+    border-radius: 50%;
+    width: 40px;
+}
+.author-fullname {
+    margin: 0rem 1rem;
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+}
+.date {
+    margin: 0rem 1rem;
+    color: hsl(212, 23%, 69%);
+    font-weight: 400;
+}
+
+
+
+/* share */
+.shareBtn {
+    background: hsl(210, 46%, 95%);
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+}
+.shareBtn:hover {
+    background:hsl(214, 25%, 82%);
+}
+.shareBtn svg {
+    fill: #6E8098;
+}
+
+.shareBtn-content {
+    position: absolute;
+    bottom: 80px;
+    right: -70px;
+
+    font-size: 0.8rem;
+    background: hsl(217, 19%, 35%);
+    color:  hsl(212, 23%, 69%);
+    border-radius: 10px;
+    letter-spacing: 5px;
+    padding: 1em;
+    width: 210px;
+    
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.shareBtn-content::after {
+    content: "";
+    position: absolute;
+
+    border: 10px solid transparent;
+    border-top-color: hsl(217, 19%, 35%);
+    top: 100%;
+}
+.hidden {
+    display: none;
+}
+.show {
+    display: flex !important;
+}
+    
+
+.facebook {
+    width: 20px;
+    height: 20px;
+    fill: #FFF;
+}
+.facebook:hover {
+    fill: #4267B2;
+}
+
+.twitter {
+    width: 20px;
+    height: 17px;
+    fill: #FFF;
+}
+.twitter:hover {
+    fill: #1DA1F2;
+}
+
+.pinterest {
+    width: 20px;
+    height: 20px;
+    fill: #FFF;
+}
+.pinterest:hover {
+    fill: #BD081C;
+}
+
+.challenge {
+    font-size: 0.7rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+
+
+@media(max-width:950px) {
+    body {
+        font-size: 75%;
+    }
+    .article {
+        display: block;
+        max-width: 350px;
+        height: auto;
+        margin: 1rem auto;
+    }
+    .drawers-img {
+        border-radius: 10px 10px 0px 0px;
+        width: 100%;
+    }
+    .article-info {
+        border-radius: 0px 0px 10px 10px;
+        left: 0;
+        top: -5px;
+    }
+    .shareBtn {
+        position: relative;
+        background:hsl(214, 17%, 51%);
+        z-index: 2;
+    }
+    .shareBtn:hover {
+        background: hsl(213, 20%, 53%);
+    }
+    .shareBtn svg {
+        fill: hsl(210, 46%, 95%) ;
+    }
+
+
+    .shareBtn-content {
+        border-radius: 0px 0px 10px 10px;
+        bottom: 0px;
+        left: 0;
+        width: 93%;
+        height: 10%;
+        justify-content: start;
+        z-index: 1;
+    }
+    .shareBtn-content:after {
+        content: none;
+    }
+    .shareBtn-content span {
+        margin-left: 1rem;
+    }
+
+    .twitter,
+    .pinterest,
+    .facebook {
+        width: 20px;
+        height: 20px;
+        margin-left: 1rem;
+    }
+}
